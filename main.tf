@@ -14,7 +14,7 @@ module "networking" {
 }
 
 module "compute" {
-    source = "./module/compute"
+    source = "./modules/compute"
     region = var.region
     zones = ["us-central1-a", "us-central1-b"]
     subnet_self_link = module.networking.subnet_name

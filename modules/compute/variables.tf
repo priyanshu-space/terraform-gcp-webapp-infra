@@ -17,3 +17,9 @@ variable "subnet_self_link" {}
 variable "target_size" {
     default = 2 
 }
+
+variable "distribution_policy_zones" {
+  description = "List of zones for the regional instance group"
+  type        = list(string)
+  default     = ["us-central1-a", "us-central1-b"]
+}

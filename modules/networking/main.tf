@@ -11,7 +11,7 @@ resource "google_compute_subnetwork" "subnet" {
 }
 
 resource "google_compute_firewall" "allow_http" {
-    name = "allow_http"
+    name = "allow-http"
     network = google_compute_network.vpc_network.name
 
     allow {

@@ -3,20 +3,20 @@ resource "google_compute_instance_template" "default" {
     machine_type = var.machine_type
     region = var.region
 
-    tags = ["web]
+    tags = ["web"]
 
     disks {
         source_image = var.source_image
-        auto_delete = true                                     # "?"
+        auto_delete = true
         boot = true
     }
 
     network_interface {
       subnetwork = var.subnet_self_link                        # A self_link is the full URL of a GCP resource
-      access_config {} # for external IP (?)
+      access_config {} # for external IP
     }
 
-    metadata_startup_script = file(${path.module}/startup.sh)
+    metadata_startup_script = file("${path.module}/startup.sh")
 }
 
 resource "google_compute_region_instance_group_manager" "web_mig" {
