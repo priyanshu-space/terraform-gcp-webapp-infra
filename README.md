@@ -1,7 +1,6 @@
 # terraform-gcp-webapp-infra
 
-Prerequisites
---------------
+*Prerequisites*
  * Terraform CLI
  * GCP account
  * Git + Github
