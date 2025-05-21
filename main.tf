@@ -20,3 +20,8 @@ module "compute" {
     subnet_self_link = module.networking.subnet_name
     target_size = 2
 }
+
+module "loadbalancer" {
+    source = "./modules/loadbalancer"
+    instance_group = module.compute.instance_group
+}
